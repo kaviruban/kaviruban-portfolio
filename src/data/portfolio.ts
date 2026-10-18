@@ -57,4 +57,4 @@ export const greetings = [
 ];
 
 export const resumeLink =
-  "https://drive.google.com/file/d/14wMMRj8KwDabEWQdknk103_xTMqtb2Uv/view?usp=sharing";
+  "https://drive.google.com/file/d/14wMMRj8KwDabEWQdknk103_xTMqtb2Uv/view?usp=drivesdk";
