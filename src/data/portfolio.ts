@@ -48,10 +48,13 @@ export const navigation: { id: View; label: string }[] = [
 ];
 
 export const greetings = [
-  "hello.",
-  "vanakkam.",
-  "bonjour.",
-  "hola.",
-  "ciao.",
-  "namaste.",
+  "Hello.",
+  "Vanakkam.",
+  "Bonjour.",
+  "Hola.",
+  "Ciao.",
+  "Namaste.",
 ];
+
+export const resumeLink =
+  "https://drive.google.com/file/d/14wMMRj8KwDabEWQdknk103_xTMqtb2Uv/view?usp=sharing";

@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { experience, skills, type View } from "../data/portfolio";
+import { experience, resumeLink, skills } from "../data/portfolio";
 
 type ViewHeaderProps = {
   index: string;
@@ -20,7 +20,7 @@ function ViewHeader({ index, eyebrow, title, description }: ViewHeaderProps) {
   );
 }
 
-export function HomeView({ onNavigate }: { onNavigate: (view: View) => void }) {
+export function HomeView() {
   return (
     <section className="view home-view" id="home">
       <div className="home-intro">
@@ -35,13 +35,17 @@ export function HomeView({ onNavigate }: { onNavigate: (view: View) => void }) {
           I build thoughtful digital products where engineering precision meets
           clear, human interaction.
         </p>
-        <button
-          className="text-action"
-          onClick={() => onNavigate("experience")}
-          type="button"
-        >
-          View experience <span>↗</span>
-        </button>
+        <div style={{ display: "flex", gap: "1.2rem", flexWrap: "wrap" }}>
+          <a
+            className="text-action resume-action"
+            href={resumeLink}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ResumeIcon />
+            Resume <span>↗</span>
+          </a>
+        </div>
       </div>
       <div className="home-side">
         <div className="availability-card">
@@ -177,6 +181,21 @@ export function ContactView() {
         </a>
       </div>
     </section>
+  );
+}
+
+function ResumeIcon() {
+  return (
+    <svg
+      className="resume-icon"
+      aria-hidden="true"
+      viewBox="0 0 20 20"
+      fill="none"
+    >
+      <path d="M6 2.5h6l4 4v10.2A1.3 1.3 0 0 1 14.7 18H6a1.3 1.3 0 0 1-1.3-1.3V3.8A1.3 1.3 0 0 1 6 2.5Z" />
+      <path d="M12 2.5v4h4" />
+      <path d="M7 9.5h6M7 12.5h6" />
+    </svg>
   );
 }
 
