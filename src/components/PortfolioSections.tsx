@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { experience, resumeLink, skills } from "../data/portfolio";
+import { experience, resumeLink, skills, type View } from "../data/portfolio";
 
 type ViewHeaderProps = {
   index: string;
@@ -20,7 +20,9 @@ function ViewHeader({ index, eyebrow, title, description }: ViewHeaderProps) {
   );
 }
 
-export function HomeView() {
+export function HomeView({ onNavigate }: { onNavigate: (view: View) => void }) {
+  void onNavigate;
+
   return (
     <section className="view home-view" id="home">
       <div className="home-intro">
